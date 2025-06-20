@@ -18,6 +18,12 @@ brew install tmux starship spotify_player lazygit neovim lsd lf bat ripgrep
 ### Nerd Fonts (for icons/symbols)
 Install a Nerd Font to correctly render icons used by tools like Starship, WezTerm, and lsd. [Download Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 Recommended: Hack Nerd Font, FiraCode Nerd Font or JetBrainsMono Nerd Font.
+### Desktop Applications (optional)
+These are desktop applications I personally use alongside my terminal setup. They’re optional and not required for the dotfiles to work.
+```bash
+brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
+```
+
 
 ## Tool List
 
