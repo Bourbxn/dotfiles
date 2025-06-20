@@ -127,8 +127,10 @@ alias sptf='spotify_player'
 alias lfconf='nvim ~/.config/lf/lfrc'
 
 # starship.rs
+export STARSHIP_CONFIG="$HOME/dotfiles/.config/starship/starship.toml"
 eval "$(starship init zsh)"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 # zsh-syntax-highlighting
 # Catppuccin Mocha Theme (for zsh-syntax-highlighting)

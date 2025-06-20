@@ -1,0 +1,24 @@
+name:
+  .docker: 󰡨
+  .bashrc: 
+  .zshrc: 
+  .dotnet: 
+  .gradle: 
+  .microsoft: 󰍲
+  .mongodb: 
+  .omnisharp: 󰌛
+  .orbstack: 
+  .tmux: 
+extension:
+  toml: 
+filetype:
+  dir: 󰉋
+  file: 󰈔
+  socket: 󰆨
+  executable: 
+  symlink-dir: 
+  symlink-file: 
+  device-char: 
+  device-block: 󰜫
+  special: 
+
