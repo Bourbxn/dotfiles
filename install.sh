@@ -11,7 +11,7 @@ else
     echo "✅ Homebrew is already installed"
 fi
 
-echo "🔧 Installing gum (for enhanced UI prompts)..."
+echo "🔧 Installing gum..."
 if ! command -v gum &>/dev/null; then
     brew install gum
 else
@@ -62,31 +62,17 @@ done
 
 # Install nerd font
 echo ""
-echo "🎨 Select Nerd Fonts to install (use space to select, enter to confirm):"
-fonts=(
-    "font-hack-nerd-font"
-    "font-fira-code-nerd-font"
-    "font-iosevka-nerd-font"
-    "font-jetbrains-mono-nerd-font"
-    "font-meslo-lg-nerd-font"
-    "Skip font installation"
-)
+echo "🎨 Installing Hack Nerd Font..."
 
-selected_fonts=$(gum choose --no-limit --cursor.foreground="212" --header="Choose Nerd Fonts to install" "${fonts[@]}")
+font="font-hack-nerd-font"
 
-if echo "$selected_fonts" | grep -q "Skip font installation"; then
-    echo "🚫 Skipping Nerd Fonts installation."
+if ! brew list --cask | grep -q "^$font\$"; then
+    echo "📥 Installing $font..."
+    brew install --cask "$font"
 else
-    echo "📥 Installing selected Nerd Fonts..."
-    for font in $selected_fonts; do
-        if ! brew list --cask | grep -q "^$font\$"; then
-            echo "Installing $font..."
-            brew install --cask "$font"
-        else
-            echo "$font is already installed."
-        fi
-    done
+    echo "✅ $font is already installed."
 fi
+
 
 # Ask about installing dev starter pack (GUI apps) using gum
 echo ""
