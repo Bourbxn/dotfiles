@@ -174,7 +174,7 @@ tmux new-session -d
 tmux run-shell ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
 # Uninstall gum silently
-brew uninstall gum &>/dev/null || true
+brew uninstall gum
 
 echo ""
 🎉 Setup complete!
