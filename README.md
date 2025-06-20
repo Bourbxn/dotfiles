@@ -49,6 +49,13 @@ All tools are themed using the [Catppuccin](https://github.com/catppuccin) color
 - File tools (bat, lsd, lf, etc.)
 
 ## Installation
+### Auto Installation
+Run the install script directly (no need to clone):
+```bash
+bash <(curl -s https://raw.githubusercontent.com/Bourbxn/dotfiles/master/install.sh)
+```
+
+### Manual Installation
 Clone the repo into your home directory:
 ```bash
 cd ~
