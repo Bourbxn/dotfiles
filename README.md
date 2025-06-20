@@ -52,7 +52,7 @@ All tools are themed using the [Catppuccin](https://github.com/catppuccin) color
 Clone the repo into your home directory:
 ```bash
 cd ~
-git clone https://github.com/Bourbxn/dotfiles.git ~/
+git clone https://github.com/Bourbxn/dotfiles.git
 ```
 Use GNU Stow to symlink the configs:
 ```bash
