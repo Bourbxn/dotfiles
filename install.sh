@@ -1,13 +1,24 @@
 #!/usr/bin/env bash
 set -e
 
-echo "🔧 Checking and installing dependencies via Homebrew..."
+echo "🔧 Checking for Homebrew..."
 
-# Check for Homebrew
+# Check for Homebrew, install if missing
 if ! command -v brew &>/dev/null; then
     echo "🛠 Homebrew not found. Installing..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+    echo "✅ Homebrew is already installed"
 fi
+
+echo "🔧 Installing gum (for enhanced UI prompts)..."
+if ! command -v gum &>/dev/null; then
+    brew install gum
+else
+    echo "✅ gum is already installed"
+fi
+
+echo "🔧 Checking and installing dependencies via Homebrew..."
 
 # Install stow
 if ! command -v stow &>/dev/null; then
@@ -49,11 +60,37 @@ for app in "${apps[@]}"; do
     fi
 done
 
-# Ask about installing dev starter pack (GUI apps)
+# Install nerd font
 echo ""
-read -rp "💡 Do you want to install the application dev starter pack? (mongodb-compass, amazon-q, gitkraken, notion, orbstack, postman, raycast, tableplus) (y/N): " install_apps
+echo "🎨 Select Nerd Fonts to install (use space to select, enter to confirm):"
+fonts=(
+    "font-hack-nerd-font"
+    "font-fira-code-nerd-font"
+    "font-iosevka-nerd-font"
+    "font-jetbrains-mono-nerd-font"
+    "font-meslo-lg-nerd-font"
+    "Skip font installation"
+)
 
-if [[ "$install_apps" =~ ^[Yy]$ ]]; then
+selected_fonts=$(gum choose --no-limit --cursor.foreground="212" --header="Choose Nerd Fonts to install" "${fonts[@]}")
+
+if echo "$selected_fonts" | grep -q "Skip font installation"; then
+    echo "🚫 Skipping Nerd Fonts installation."
+else
+    echo "📥 Installing selected Nerd Fonts..."
+    for font in $selected_fonts; do
+        if ! brew list --cask | grep -q "^$font\$"; then
+            echo "Installing $font..."
+            brew install --cask "$font"
+        else
+            echo "$font is already installed."
+        fi
+    done
+fi
+
+# Ask about installing dev starter pack (GUI apps) using gum
+echo ""
+if gum confirm "💡 Do you want to install the application dev starter pack? (mongodb-compass, amazon-q, gitkraken, notion, orbstack, postman, raycast, tableplus)"; then
     echo "📦 Installing development applications..."
     cask_apps=(
         mongodb-compass
@@ -77,7 +114,7 @@ else
     echo "🚫 Skipping dev starter pack installation"
 fi
 
-# Prompt and remove configs
+# Prompt and remove configs with gum
 echo ""
 echo "⚠️  The following existing configs will be removed:"
 configs=(
@@ -101,8 +138,7 @@ for cfg in "${configs[@]}"; do
 done
 
 echo ""
-read -rp "❓ Do you want to proceed with removing these configs? (y/N): " confirm
-if [[ ! "$confirm" =~ ^[Yy]$ ]]; then
+if ! gum confirm "❓ Do you want to proceed with removing these configs?"; then
     echo "🚫 Installation aborted by user."
     exit 1
 fi
@@ -151,7 +187,10 @@ tmux start-server
 tmux new-session -d
 tmux run-shell ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
+# Uninstall gum silently
+brew uninstall gum &>/dev/null || true
+
 echo ""
-echo "🎉 Setup complete!"
-echo "🚀 Welcome to your dotfiles kingdom — everything is now under your command!"
+🎉 Setup complete!
+🚀 Welcome to your Dev Starter Pack — everything is now under your command!
 echo ""
