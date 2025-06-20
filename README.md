@@ -1,4 +1,4 @@
-# The Collectors (Dotfiles)
+# Dev Starter Pack (Dotfiles)
 This repository contains my personal configuration files (`dotfiles`) to set up my development environment across multiple machines. The configurations are organized and managed using [GNU Stow](https://www.gnu.org/software/stow/), which allows easy symlinking of config files into the appropriate system locations.
 
 ## Requirements
