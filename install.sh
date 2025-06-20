@@ -49,6 +49,34 @@ for app in "${apps[@]}"; do
     fi
 done
 
+# Ask about installing dev starter pack (GUI apps)
+echo ""
+read -rp "💡 Do you want to install the application dev starter pack? (mongodb-compass, amazon-q, gitkraken, notion, orbstack, postman, raycast, tableplus) (y/N): " install_apps
+
+if [[ "$install_apps" =~ ^[Yy]$ ]]; then
+    echo "📦 Installing development applications..."
+    cask_apps=(
+        mongodb-compass
+        amazon-q
+        gitkraken
+        notion
+        orbstack
+        postman
+        raycast
+        tableplus
+    )
+    for app in "${cask_apps[@]}"; do
+        if ! brew list --cask | grep -q "^$app\$"; then
+            echo "📥 Installing $app..."
+            brew install --cask "$app"
+        else
+            echo "✅ $app is already installed"
+        fi
+    done
+else
+    echo "🚫 Skipping dev starter pack installation"
+fi
+
 # Prompt and remove configs
 echo ""
 echo "⚠️  The following existing configs will be removed:"
