@@ -64,6 +64,11 @@ Launch Neovim (first time only) to trigger plugin installation:
 ```bash
 nvim
 ```
+Launch tmux (first time only) and press `<C-b> + I` to install plugins:
+```bash
+tmux
+```
+
 For more details about the Neovim setup used in this dotfiles, see [BourbxnNvim V2](https://github.com/Bourbxn/bourbxn-nvim-v2)
 
 ## Notes
