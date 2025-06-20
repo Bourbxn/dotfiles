@@ -13,7 +13,7 @@ brew install --cask wezterm
 ```
 ### CLI Tools
 ```bash
-brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep
+brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting
 ```
 ### Nerd Fonts (for icons/symbols)
 Install a Nerd Font to correctly render icons used by tools like Starship, WezTerm, and lsd. [Download Nerd Fonts](https://www.nerdfonts.com/font-downloads)
@@ -72,6 +72,7 @@ nvim
 ```
 Launch tmux (first time only) and press `<C-b> + I` to install plugins:
 ```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux
 ```
 
