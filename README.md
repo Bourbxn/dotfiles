@@ -1,5 +1,8 @@
 # Dev Starter Pack (Dotfiles)
-This repository contains my personal configuration files (`dotfiles`) to set up my development environment across multiple machines. The configurations are organized and managed using [GNU Stow](https://www.gnu.org/software/stow/), which allows easy symlinking of config files into the appropriate system locations.
+This repository contains my personal configuration files (`dotfiles`) to set up my development environment across multiple machines. The configurations are organized and managed using [GNU Stow](https://www.gnu.org/software/stow/), which allows easy symlinking of config files into the appropriate system locations. 
+
+![image](https://github.com/user-attachments/assets/4701ed86-d000-43c3-a155-e4f4712d2ea0)
+
 
 ## Requirements
 Ensure you have the following installed on your system <br><br>
