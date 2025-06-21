@@ -112,6 +112,7 @@ configs=(
     "$HOME/.config/tmux"
     "$HOME/.tmux"
     "$HOME/.config/starship.toml"
+    "$HOME/.config/fish"
     "$HOME/.zshrc"
     "$HOME/.config/wezterm"
     "$HOME/dotfiles"
