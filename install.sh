@@ -58,9 +58,11 @@ for app in "${apps[@]}"; do
         echo "📦 Installing $app..."
         brew install "$app"
     else
-        echo "✅ $app is already installed"
+        echo "🔄 Upgrading $app..."
+        brew upgrade "$app"
     fi
 done
+
 
 # Install nerd font
 echo ""
@@ -179,7 +181,7 @@ tmux start-server
 tmux new-session -d
 tmux run-shell ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
-# Uninstall gum silently
+# Uninstall gum 
 brew uninstall gum
 
 echo ""
