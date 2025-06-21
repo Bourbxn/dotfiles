@@ -178,6 +178,6 @@ tmux run-shell ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 brew uninstall gum
 
 echo ""
-🎉 Setup complete!
-🚀 Welcome to your Dev Starter Pack — everything is now under your command!
+echo "🎉 Setup complete!"
+echo "🚀 Welcome to your Dev Starter Pack — everything is now under your command!"
 echo ""
