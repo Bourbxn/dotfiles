@@ -17,7 +17,7 @@ brew install --cask wezterm
 ```
 ### CLI Tools
 ```bash
-brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting
+brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting fnm pyenv
 ```
 ### Nerd Fonts (for icons/symbols)
 Install a Nerd Font to correctly render icons used by tools like Starship, WezTerm, and lsd. [Download Nerd Fonts](https://www.nerdfonts.com/font-downloads)
