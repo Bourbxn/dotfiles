@@ -181,11 +181,9 @@ else
     echo "✅ TPM already installed"
 fi
 
-# Install catpuccin tmux
-git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
-
 # Run tmux plugin installation
 echo "🔄 Installing tmux plugins via TPM..."
+git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
 tmux start-server
 tmux new-session -d
 tmux run-shell ~/.tmux/plugins/tpm/scripts/install_plugins.sh
