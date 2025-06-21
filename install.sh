@@ -49,6 +49,8 @@ apps=(
     bat
     ripgrep
     zsh-syntax-highlighting
+    fnm
+    pyenv
 )
 
 for app in "${apps[@]}"; do
