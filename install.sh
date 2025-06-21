@@ -187,6 +187,9 @@ tmux start-server
 tmux new-session -d
 tmux run-shell ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
+# Install catpuccin tmux
+git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+
 # Uninstall gum 
 brew uninstall gum
 
