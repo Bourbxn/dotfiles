@@ -108,6 +108,8 @@ echo "⚠️  The following existing configs will be removed:"
 configs=(
     "$HOME/.config/spotify-player"
     "$HOME/.config/nvim"
+    "$HOME/.local/share/nvim"
+    "$HOME/.cache/nvim"
     "$HOME/.config/lsd"
     "$HOME/.config/lf"
     "$HOME/.config/bat"
@@ -117,6 +119,7 @@ configs=(
     "$HOME/.config/fish"
     "$HOME/.zshrc"
     "$HOME/.config/wezterm"
+    "$HOME/.wezterm.lua"
     "$HOME/dotfiles"
 )
 
