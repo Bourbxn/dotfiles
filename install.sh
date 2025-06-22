@@ -60,6 +60,7 @@ apps=(
     fnm
     pyenv
     thefuck
+    zoxide
 )
 
 for app in "${apps[@]}"; do
