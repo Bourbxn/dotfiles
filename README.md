@@ -83,13 +83,24 @@ Launch Neovim (first time only) to trigger plugin installation:
 ```bash
 nvim
 ```
+For more details about the Neovim setup used in this dotfiles, see [BourbxnNvim V2](https://github.com/Bourbxn/bourbxn-nvim-v2)
+
 Launch tmux (first time only) and press `<C-b> + I` to install plugins:
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux
 ```
+### Optional Setup
+#### FZF Key bindings
+To enable useful keybindings for FZF (like reverse search in terminal), run:
+```
+$(brew --prefix)/opt/fzf/install
+```
 
-For more details about the Neovim setup used in this dotfiles, see [BourbxnNvim V2](https://github.com/Bourbxn/bourbxn-nvim-v2)
+
+
+
+
 
 ## Notes
 - After installation, reload your shell: source ~/.zshrc
