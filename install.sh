@@ -55,6 +55,8 @@ apps=(
     bat
     ripgrep
     zsh-syntax-highlighting
+    btop
+    fzf
     fnm
     pyenv
 )
