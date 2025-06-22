@@ -188,8 +188,9 @@ tmux start-server
 tmux new-session -d
 tmux run-shell ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
-# Uninstall gum 
-brew uninstall gum
+# Build bat
+echo "🎨 Rebuilding bat theme cache to include Catppuccin Mocha theme..."
+bat cache --build
 
 echo ""
 echo "🎉 Setup complete!"
