@@ -1,3 +1,5 @@
 # Ignore TPM plugins
 .config/tmux/plugins/*
+
+# Ignore btop config
 .config/btop/btop.conf
