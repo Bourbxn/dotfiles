@@ -17,7 +17,7 @@ brew install --cask wezterm
 ```
 ### CLI Tools
 ```bash
-brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting btop fzf fnm pyenv thefuck
+brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting btop fzf fnm pyenv thefuck zoxide
 ```
 ### Nerd Fonts (for icons/symbols)
 Install a Nerd Font to correctly render icons used by tools like Starship, WezTerm, and lsd. [Download Nerd Fonts](https://www.nerdfonts.com/font-downloads)
@@ -46,6 +46,7 @@ brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
 | [fzf](https://github.com/junegunn/fzf) | A command-line fuzzy finder that helps you search and open files, history, processes, and more efficiently. |
 | [btop](https://github.com/aristocratos/btop) | A modern and visually appealing resource monitor for the terminal with mouse support. |
 | [thefuck](https://github.com/nvbn/thefuck) | A smart command-line tool that corrects your previous console command when you make a mistake. |
+| [zoxide](https://github.com/ajeetdsouza/zoxide) | A smarter `cd` command that remembers your frequently used directories. |
 
 ## Theme
 All tools are themed using the [Catppuccin](https://github.com/catppuccin) color palette (Mocha variant), providing a consistent pastel tone across:
