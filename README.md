@@ -17,7 +17,7 @@ brew install --cask wezterm
 ```
 ### CLI Tools
 ```bash
-brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting btop fzf fnm pyenv
+brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting btop fzf fnm pyenv thefuck
 ```
 ### Nerd Fonts (for icons/symbols)
 Install a Nerd Font to correctly render icons used by tools like Starship, WezTerm, and lsd. [Download Nerd Fonts](https://www.nerdfonts.com/font-downloads)
@@ -34,6 +34,7 @@ brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
 | Tool | Description |
 |------|-------------|
 | [WezTerm](https://wezfurlong.org/wezterm/) | A GPU-accelerated terminal emulator with modern features and Lua-based configuration. |
+| [zsh](https://zsh.sourceforge.io/) | A powerful and extensible shell with custom prompt (Starship), completions, and syntax highlighting. |
 | [tmux](https://github.com/tmux/tmux) | Terminal multiplexer that allows for managing multiple sessions and panes in one window. |
 | [Starship](https://starship.rs/) | A fast, customizable, and minimal shell prompt that works with any shell. |
 | [spotify-player](https://github.com/aome510/spotify-player) | A terminal-based Spotify client with a clean UI and keyboard-driven interface. |
@@ -44,8 +45,7 @@ brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
 | [lazygit](https://github.com/jesseduffield/lazygit) | A simple terminal UI for git commands, making git easier and faster to use. |
 | [fzf](https://github.com/junegunn/fzf) | A command-line fuzzy finder that helps you search and open files, history, processes, and more efficiently. |
 | [btop](https://github.com/aristocratos/btop) | A modern and visually appealing resource monitor for the terminal with mouse support. |
-| [zsh](https://zsh.sourceforge.io/) | A powerful and extensible shell with custom prompt (Starship), completions, and syntax highlighting. |
-
+| [thefuck](https://github.com/nvbn/thefuck) | A smart command-line tool that corrects your previous console command when you make a mistake. |
 
 ## Theme
 All tools are themed using the [Catppuccin](https://github.com/catppuccin) color palette (Mocha variant), providing a consistent pastel tone across:
