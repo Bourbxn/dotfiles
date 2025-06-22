@@ -17,7 +17,7 @@ brew install --cask wezterm
 ```
 ### CLI Tools
 ```bash
-brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting fnm pyenv
+brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting btop fzf fnm pyenv
 ```
 ### Nerd Fonts (for icons/symbols)
 Install a Nerd Font to correctly render icons used by tools like Starship, WezTerm, and lsd. [Download Nerd Fonts](https://www.nerdfonts.com/font-downloads)
@@ -42,7 +42,9 @@ brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
 | [lf](https://github.com/gokcehan/lf) | A terminal file manager with vim-like keybindings and preview support. |
 | [bat](https://github.com/sharkdp/bat) | A `cat` clone with syntax highlighting and Git integration for viewing files in the terminal. |
 | [lazygit](https://github.com/jesseduffield/lazygit) | A simple terminal UI for git commands, making git easier and faster to use. |
-| [.zshrc](https://zsh.sourceforge.io/) | Custom Zsh shell configuration file including Starship prompt and syntax highlighting. |
+| [fzf](https://github.com/junegunn/fzf) | A command-line fuzzy finder that helps you search and open files, history, processes, and more efficiently. |
+| [btop](https://github.com/aristocratos/btop) | A modern and visually appealing resource monitor for the terminal with mouse support. |
+| [zsh](https://zsh.sourceforge.io/) | A powerful and extensible shell with custom prompt (Starship), completions, and syntax highlighting. |
 
 
 ## Theme
