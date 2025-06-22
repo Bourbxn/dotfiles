@@ -41,6 +41,18 @@ config.keys = {
 		mods = "SHIFT|CTRL",
 		action = wezterm.action.ToggleFullScreen,
 	},
+	{
+		key = "t",
+		mods = "CTRL",
+		action = wezterm.action.SendString(
+			'fzf --preview "bat --color=always --style=numbers,grid {}" | xargs -n 1 nvim\n'
+		),
+	},
+	{
+		key = "e",
+		mods = "CTRL",
+		action = wezterm.action.SendString("lf\n"),
+	},
 }
 
 return config

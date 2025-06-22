@@ -113,7 +113,7 @@ alias weztconf="nvim ~/dotfiles/.config/wezterm/wezterm.lua"
 alias lsdconf="nvim ~/.config/lsd"
 alias tx="tmux"
 alias  v="nvim"
-alias vf="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
+# alias vf="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
 alias clr="clear"
 alias y="yarn"
 alias jvmls="/usr/libexec/java_home -V"
@@ -125,6 +125,8 @@ alias lt='ls --tree'
 alias lzg='lazygit'
 alias sptf='spotify_player'
 alias lfconf='nvim ~/.config/lf/lfrc'
+alias vf='fzf --preview "bat --color=always --style=numbers,grid {}" | xargs -n 1 nvim'
+
 
 # starship.rs
 export STARSHIP_CONFIG="$HOME/dotfiles/.config/starship/starship.toml"
@@ -207,6 +209,14 @@ ZSH_HIGHLIGHT_STYLES[arg0]='fg=#cdd6f4'
 ZSH_HIGHLIGHT_STYLES[default]='fg=#cdd6f4'
 ZSH_HIGHLIGHT_STYLES[cursor]='fg=#cdd6f4'
 
+# fzf theme
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
+--color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
+--color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
+--color=selected-bg:#45475A \
+--color=border:#313244,label:#CDD6F4"
+
 # gvm
 [[ -s "/Users/jakkapat.pai/.gvm/scripts/gvm" ]] && source "/Users/jakkapat.pai/.gvm/scripts/gvm"
 
@@ -238,3 +248,5 @@ export EDITOR=nvim
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
