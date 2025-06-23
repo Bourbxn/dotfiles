@@ -26,7 +26,7 @@ config.window_padding = {
 	bottom = 20,
 }
 -- Window Background Opacity
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.8
 -- Window Backgroud Blur: for macos
 config.macos_window_background_blur = 20
 
