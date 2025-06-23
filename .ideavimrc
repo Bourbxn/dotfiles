@@ -1,0 +1,36 @@
+" Idealvim config for Intellij IDE
+let mapleader = " "
+
+set relativenumber
+
+" exit insert mode
+inoremap jk <Esc>
+
+" Vertical scroll and center
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+" Tab
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+nnoremap <leader>x :bd<CR>
+
+" Move selected lines up/down
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Go to Declaration / Definition
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap ca :action ShowIntentionActions<CR>
+
+" Comment/Uncomment
+vnoremap gc :action CommentByLineComment<CR>
+nnoremap gcc :action CommentByLineComment<CR>
+
+" Quick open file
+nnoremap <leader>sf :action GotoFile<CR>
+nnoremap <leader>sw :action FindInPath<CR>
+
+" Find
+nnoremap / :action Find<CR>
+
