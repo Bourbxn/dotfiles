@@ -17,7 +17,7 @@ brew install --cask wezterm
 ```
 ### CLI Tools
 ```bash
-brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting btop fzf fnm pyenv
+brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting btop fzf fnm pyenv thefuck zoxide tlrc
 ```
 ### Nerd Fonts (for icons/symbols)
 Install a Nerd Font to correctly render icons used by tools like Starship, WezTerm, and lsd. [Download Nerd Fonts](https://www.nerdfonts.com/font-downloads)
@@ -34,6 +34,7 @@ brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
 | Tool | Description |
 |------|-------------|
 | [WezTerm](https://wezfurlong.org/wezterm/) | A GPU-accelerated terminal emulator with modern features and Lua-based configuration. |
+| [zsh](https://zsh.sourceforge.io/) | A powerful and extensible shell with custom prompt (Starship), completions, and syntax highlighting. |
 | [tmux](https://github.com/tmux/tmux) | Terminal multiplexer that allows for managing multiple sessions and panes in one window. |
 | [Starship](https://starship.rs/) | A fast, customizable, and minimal shell prompt that works with any shell. |
 | [spotify-player](https://github.com/aome510/spotify-player) | A terminal-based Spotify client with a clean UI and keyboard-driven interface. |
@@ -44,8 +45,9 @@ brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
 | [lazygit](https://github.com/jesseduffield/lazygit) | A simple terminal UI for git commands, making git easier and faster to use. |
 | [fzf](https://github.com/junegunn/fzf) | A command-line fuzzy finder that helps you search and open files, history, processes, and more efficiently. |
 | [btop](https://github.com/aristocratos/btop) | A modern and visually appealing resource monitor for the terminal with mouse support. |
-| [zsh](https://zsh.sourceforge.io/) | A powerful and extensible shell with custom prompt (Starship), completions, and syntax highlighting. |
-
+| [thefuck](https://github.com/nvbn/thefuck) | A smart command-line tool that corrects your previous console command when you make a mistake. |
+| [zoxide](https://github.com/ajeetdsouza/zoxide) | A smarter `cd` command that remembers your frequently used directories. |
+| [tldr](https://github.com/tldr-pages/tldr) | Simplified and community-driven man pages — shows practical examples for common commands. |
 
 ## Theme
 All tools are themed using the [Catppuccin](https://github.com/catppuccin) color palette (Mocha variant), providing a consistent pastel tone across:
@@ -83,13 +85,19 @@ Launch Neovim (first time only) to trigger plugin installation:
 ```bash
 nvim
 ```
+For more details about the Neovim setup used in this dotfiles, see [BourbxnNvim V2](https://github.com/Bourbxn/bourbxn-nvim-v2)
+
 Launch tmux (first time only) and press `<C-b> + I` to install plugins:
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux
 ```
-
-For more details about the Neovim setup used in this dotfiles, see [BourbxnNvim V2](https://github.com/Bourbxn/bourbxn-nvim-v2)
+### Optional Setup
+#### FZF Key bindings
+To enable useful keybindings for FZF (like reverse search in terminal), run:
+```
+$(brew --prefix)/opt/fzf/install
+```
 
 ## Notes
 - After installation, reload your shell: source ~/.zshrc

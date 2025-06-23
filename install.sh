@@ -59,6 +59,9 @@ apps=(
     fzf
     fnm
     pyenv
+    thefuck
+    zoxide
+    tlrc
 )
 
 for app in "${apps[@]}"; do

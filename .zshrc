@@ -102,6 +102,8 @@ plugins=(git)
 # For a full list of active aliases, run `alias`.
 
 # aliases
+alias cd="z"
+alias cdi="zi"
 alias py="python3"
 alias stshconf="nvim ~/.config/starship.toml"
 alias zshconf="nvim ~/.zshrc"
@@ -228,18 +230,12 @@ eval "$(pyenv init - zsh)"
 
 # lf
 export EDITOR=nvim
-# lfcd() {
-#     tmpfile=$(mktemp)
-#     lf -last-dir-path="$tmpfile" "$@"
-#     if [ -f "$tmpfile" ]; then
-#         dir=$(cat "$tmpfile")
-#         rm -f "$tmpfile"
-#         if [ -d "$dir" ]; then
-#             cd "$dir"
-#         fi
-#     fi
-# }
-# alias lf='lfcd'
+
+# thefuck
+eval "$(thefuck --alias f)"
+
+# zoxide
+eval "$(zoxide init zsh)"
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
