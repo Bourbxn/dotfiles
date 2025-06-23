@@ -102,6 +102,7 @@ if gum confirm "💡 Do you want to install the application dev starter pack? (m
         postman
         raycast
         tableplus
+        nikitabobko/tap/aerospace
     )
     for app in "${cask_apps[@]}"; do
         if ! brew list --cask | grep -q "^$app\$"; then
