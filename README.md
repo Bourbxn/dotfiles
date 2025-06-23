@@ -48,6 +48,7 @@ brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
 | [thefuck](https://github.com/nvbn/thefuck) | A smart command-line tool that corrects your previous console command when you make a mistake. |
 | [zoxide](https://github.com/ajeetdsouza/zoxide) | A smarter `cd` command that remembers your frequently used directories. |
 | [tldr](https://github.com/tldr-pages/tldr) | Simplified and community-driven man pages — shows practical examples for common commands. |
+| [IdeaVim](https://github.com/JetBrains/ideavim) | Vim emulation plugin for IntelliJ IDEA and JetBrains IDEs. Enables Vim keybindings and modal editing. |
 
 ## Theme
 All tools are themed using the [Catppuccin](https://github.com/catppuccin) color palette (Mocha variant), providing a consistent pastel tone across:
