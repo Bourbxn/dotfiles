@@ -25,7 +25,7 @@ Recommended: Hack Nerd Font, FiraCode Nerd Font or JetBrainsMono Nerd Font.
 ### Desktop Applications (optional)
 These are desktop applications I personally use alongside my terminal setup. They’re optional and not required for the dotfiles to work.
 ```bash
-brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
+brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus nikitabobko/tap/aerospace
 ```
 
 
@@ -49,6 +49,7 @@ brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
 | [zoxide](https://github.com/ajeetdsouza/zoxide) | A smarter `cd` command that remembers your frequently used directories. |
 | [tldr](https://github.com/tldr-pages/tldr) | Simplified and community-driven man pages — shows practical examples for common commands. |
 | [IdeaVim](https://github.com/JetBrains/ideavim) | Vim emulation plugin for IntelliJ IDEA and JetBrains IDEs. Enables Vim keybindings and modal editing. |
+| [AeroSpace](https://github.com/aerospace/aerospace) | A lightweight tiling window manager with support for custom layouts, dynamic gaps, and window management. |
 
 ## Theme
 All tools are themed using the [Catppuccin](https://github.com/catppuccin) color palette (Mocha variant), providing a consistent pastel tone across:
