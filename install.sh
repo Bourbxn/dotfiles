@@ -21,7 +21,8 @@ echo "🔧 Installing gum..."
 if ! command -v gum &>/dev/null; then
     brew install gum
 else
-    echo "✅ gum is already installed"
+    echo "🔄 Upgrading gum..."
+    brew upgrade gum
 fi
 
 echo "🔧 Checking and installing dependencies via Homebrew..."
@@ -31,7 +32,8 @@ if ! command -v stow &>/dev/null; then
     echo "📦 Installing GNU Stow..."
     brew install stow
 else
-    echo "✅ stow is already installed"
+    echo "🔄 Upgrading stow..."
+    brew upgrade stow
 fi
 
 # Install wezterm (cask)
@@ -39,7 +41,8 @@ if ! brew list --cask | grep -q wezterm; then
     echo "📦 Installing WezTerm..."
     brew install --cask wezterm
 else
-    echo "✅ wezterm is already installed"
+    echo "🔄 Upgrading wezterm..."
+    brew upgrade --cask wezterm
 fi
 
 # Install CLI tools
@@ -74,6 +77,45 @@ for app in "${apps[@]}"; do
     fi
 done
 
+# Install aerospace if not installed, else upgrade
+if ! brew list | grep -q "^sketchybar\$"; then
+    echo "📦 Installing aerospace..."
+    brew install nikitabobko/tap/aerospace
+else
+    echo "🔄 Upgrading aerospace..."
+    brew upgrade nikitabobko/tap/aerospace
+fi
+
+
+# Tap repository for sketchybar
+brew tap FelixKratz/formulae
+
+# Install sketchybar if not installed, else upgrade
+if ! brew list | grep -q "^sketchybar\$"; then
+    echo "📦 Installing sketchybar..."
+    brew install sketchybar
+else
+    echo "🔄 Upgrading sketchybar..."
+    brew upgrade sketchybar
+fi
+
+# Install fonts for sketchybar
+echo "📦 Installing fonts for sketchybar..."
+if ! brew list --cask | grep -q "^font-sketchybar-app-font\$"; then
+    echo "📦 Installing font-sketchybar-app-font..."
+    brew install --cask font-sketchybar-app-font
+else
+    echo "🔄 Upgrading font-sketchybar-app-font..."
+    brew upgrade --cask font-sketchybar-app-font
+fi
+
+if ! brew list | grep -q "^font-sf-pro\$"; then
+    echo "📦 Installing font-sf-pro..."
+    brew install font-sf-pro
+else
+    echo "🔄 Upgrading font-sf-pro..."
+    brew upgrade font-sf-pro
+fi
 
 # Install nerd font
 echo ""
@@ -85,7 +127,8 @@ if ! brew list --cask | grep -q "^$font\$"; then
     echo "📥 Installing $font..."
     brew install --cask "$font"
 else
-    echo "✅ $font is already installed."
+    echo "🔄 Upgrading $font..."
+    brew upgrade --cask "$font"
 fi
 
 
@@ -102,14 +145,14 @@ if gum confirm "💡 Do you want to install the application dev starter pack? (m
         postman
         raycast
         tableplus
-        nikitabobko/tap/aerospace
     )
     for app in "${cask_apps[@]}"; do
         if ! brew list --cask | grep -q "^$app\$"; then
             echo "📥 Installing $app..."
             brew install --cask "$app"
         else
-            echo "✅ $app is already installed"
+            echo "🔄 Upgrading $app..."
+            brew upgrade --cask "$app"
         fi
     done
 else
@@ -127,6 +170,8 @@ configs=(
     "$HOME/.config/lsd"
     "$HOME/.config/lf"
     "$HOME/.config/bat"
+    "$HOME/.config/aerospace"
+    "$HOME/.config/sketchybar"
     "$HOME/.config/tmux"
     "$HOME/.tmux"
     "$HOME/.config/starship.toml"
@@ -134,8 +179,8 @@ configs=(
     "$HOME/.zshrc"
     "$HOME/.config/wezterm"
     "$HOME/.wezterm.lua"
-    "$HOME/dotfiles"
-)
+    "$HOME/dotfiles
+")
 
 for cfg in "${configs[@]}"; do
     if [ -e "$cfg" ]; then
