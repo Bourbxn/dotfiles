@@ -50,6 +50,7 @@ brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
 | [tldr](https://github.com/tldr-pages/tldr) | Simplified and community-driven man pages — shows practical examples for common commands. |
 | [IdeaVim](https://github.com/JetBrains/ideavim) | Vim emulation plugin for IntelliJ IDEA and JetBrains IDEs. Enables Vim keybindings and modal editing. |
 | [AeroSpace](https://github.com/aerospace/aerospace) | A lightweight tiling window manager with support for custom layouts, dynamic gaps, and window management. |
+| [sketchybar](https://github.com/FelixKratz/sketchybar) | Customizable macOS status bar with scriptable items and animations. |
 
 ## Theme
 All tools are themed using the [Catppuccin](https://github.com/catppuccin) color palette (Mocha variant), providing a consistent pastel tone across:
@@ -63,6 +64,11 @@ All tools are themed using the [Catppuccin](https://github.com/catppuccin) color
 Run the install script directly (no need to clone):
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/Bourbxn/dotfiles/master/install.sh)
+```
+### Auto Uninstallation
+To completely remove all installed tools and configuration files:
+```bash
+bash <(curl -s https://raw.githubusercontent.com/Bourbxn/dotfiles/master/uninstall.sh)
 ```
 
 ### Manual Installation
@@ -102,6 +108,6 @@ $(brew --prefix)/opt/fzf/install
 ```
 
 ## Notes
-- After installation, reload your shell: source ~/.zshrc
 - You can safely edit config files directly inside the dotfiles/ repo
 - Some tools (like spotify-player) may require additional API tokens or setup
+- To run `sketchybar` in the background automatically, run `brew services start sketchybar`
