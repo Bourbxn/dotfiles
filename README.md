@@ -1,7 +1,9 @@
 # Dev Starter Pack (Dotfiles)
-This repository contains my personal configuration files (`dotfiles`) to set up my development environment across multiple machines. The configurations are organized and managed using [GNU Stow](https://www.gnu.org/software/stow/), which allows easy symlinking of config files into the appropriate system locations. 
+This repository contains my personal configuration files (`dotfiles`) designed specifically for **macOS** development environments. It sets up my preferred tools and settings across machines using [GNU Stow](https://www.gnu.org/software/stow/), which makes it easy to manage and symlink configuration files into the correct locations on macOS systems.
 
-![image](https://github.com/user-attachments/assets/4701ed86-d000-43c3-a155-e4f4712d2ea0)
+
+![image](https://github.com/user-attachments/assets/61ef56f3-de7b-4923-be41-715853dbd4f3)
+
 
 
 ## Requirements
