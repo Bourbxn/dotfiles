@@ -44,7 +44,8 @@ default=(
 sketchybar --default "${default[@]}"
 
 # Left side items
-source $ITEM_DIR/spaces.sh
+# source $ITEM_DIR/spaces.sh
+source $ITEM_DIR/aerospace.sh
 source $ITEM_DIR/front_app.sh
 
 # Right side items
@@ -52,6 +53,7 @@ source $ITEM_DIR/calendar.sh
 source $ITEM_DIR/volume.sh
 source $ITEM_DIR/battery.sh
 source $ITEM_DIR/cpu.sh
+source $ITEM_DIR/aerospace_mode.sh
 source $ITEM_DIR/media.sh
 
 ##### Force all scripts to run the first time (never do this in a script) #####

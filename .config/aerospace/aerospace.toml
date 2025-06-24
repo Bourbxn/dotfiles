@@ -4,7 +4,7 @@
 # You can use it to add commands that run after login to macOS user session.
 # 'start-at-login' needs to be 'true' for 'after-login-command' to work
 # Available commands: https://nikitabobko.github.io/AeroSpace/commands
-after-login-command = []
+after-login-command = ['exec-and-forget sketchybar']
 
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
@@ -43,6 +43,13 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = false
+
+# Notify Sketchybar about workspace change
+exec-on-workspace-change = ['/bin/bash', '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+]
+
+
 
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -119,15 +126,15 @@ automatically-unhide-macos-hidden-apps = false
     alt-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    alt-1 = 'workspace 1'
-    alt-2 = 'workspace 2'
-    alt-3 = 'workspace 3'
-    alt-4 = 'workspace 4'
-    alt-5 = 'workspace 5'
-    alt-6 = 'workspace 6'
-    alt-7 = 'workspace 7'
-    alt-8 = 'workspace 8'
-    alt-9 = 'workspace 9'
+    # alt-1 = 'workspace 1'
+    # alt-2 = 'workspace 2'
+    # alt-3 = 'workspace 3'
+    # alt-4 = 'workspace 4'
+    # alt-5 = 'workspace 5'
+    # alt-6 = 'workspace 6'
+    # alt-7 = 'workspace 7'
+    # alt-8 = 'workspace 8'
+    # alt-9 = 'workspace 9'
     # alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
     alt-b = 'workspace B'
     # alt-c = 'workspace C'
@@ -141,7 +148,7 @@ automatically-unhide-macos-hidden-apps = false
     # alt-o = 'workspace O'
     # alt-p = 'workspace P'
     # alt-q = 'workspace Q'
-    # alt-r = 'workspace R'
+    alt-r = 'workspace R'
     # alt-s = 'workspace S'
     alt-t = 'workspace T'
     # alt-u = 'workspace U'
@@ -149,18 +156,18 @@ automatically-unhide-macos-hidden-apps = false
     # alt-w = 'workspace W'
     # alt-x = 'workspace X'
     # alt-y = 'workspace Y'
-    alt-z = 'workspace Z'
+    # alt-z = 'workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    alt-shift-1 = 'move-node-to-workspace 1'
-    alt-shift-2 = 'move-node-to-workspace 2'
-    alt-shift-3 = 'move-node-to-workspace 3'
-    alt-shift-4 = 'move-node-to-workspace 4'
-    alt-shift-5 = 'move-node-to-workspace 5'
-    alt-shift-6 = 'move-node-to-workspace 6'
-    alt-shift-7 = 'move-node-to-workspace 7'
-    alt-shift-8 = 'move-node-to-workspace 8'
-    alt-shift-9 = 'move-node-to-workspace 9'
+    # alt-shift-1 = 'move-node-to-workspace 1'
+    # alt-shift-2 = 'move-node-to-workspace 2'
+    # alt-shift-3 = 'move-node-to-workspace 3'
+    # alt-shift-4 = 'move-node-to-workspace 4'
+    # alt-shift-5 = 'move-node-to-workspace 5'
+    # alt-shift-6 = 'move-node-to-workspace 6'
+    # alt-shift-7 = 'move-node-to-workspace 7'
+    # alt-shift-8 = 'move-node-to-workspace 8'
+    # alt-shift-9 = 'move-node-to-workspace 9'
     # alt-shift-a = 'move-node-to-workspace A'
     alt-shift-b = 'move-node-to-workspace B'
     # alt-shift-c = 'move-node-to-workspace C'
@@ -174,7 +181,7 @@ automatically-unhide-macos-hidden-apps = false
     # alt-shift-o = 'move-node-to-workspace O'
     # alt-shift-p = 'move-node-to-workspace P'
     # alt-shift-q = 'move-node-to-workspace Q'
-    # alt-shift-r = 'move-node-to-workspace R'
+    alt-shift-r = 'move-node-to-workspace R'
     # alt-shift-s = 'move-node-to-workspace S'
     alt-shift-t = 'move-node-to-workspace T'
     # alt-shift-u = 'move-node-to-workspace U'
@@ -182,7 +189,7 @@ automatically-unhide-macos-hidden-apps = false
     # alt-shift-w = 'move-node-to-workspace W'
     # alt-shift-x = 'move-node-to-workspace X'
     # alt-shift-y = 'move-node-to-workspace Y'
-    alt-shift-z = 'move-node-to-workspace Z'
+    # alt-shift-z = 'move-node-to-workspace Z'
 
     alt-shift-f = 'fullscreen'
 
@@ -192,17 +199,18 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
-    alt-shift-semicolon = 'mode service'
-    alt-shift-period = 'mode floating'
+    alt-shift-semicolon = ['mode service','exec-and-forget sketchybar --trigger aerospace_mode_change']
+    alt-shift-period = ['mode floating','exec-and-forget sketchybar --trigger aerospace_mode_change']
 
 # Floating mode
 [mode.floating.binding]
 alt-f = [
     'exec-and-forget ${HOME}/dotfiles/.config/aerospace/plugins/toggle-floating-centered.sh',
-    'mode main'
+    'mode main',
+    'exec-and-forget sketchybar --trigger aerospace_mode_change'
 ]
-alt-shift-semicolon = 'mode service'
-esc = 'mode main'
+alt-shift-semicolon = ['mode service','exec-and-forget sketchybar --trigger aerospace_mode_change']
+esc = ['mode main','exec-and-forget sketchybar --trigger aerospace_mode_change']
 
 h = 'exec-and-forget ${HOME}/dotfiles/.config/aerospace/plugins/move-floating.sh -32 0'
 j = 'exec-and-forget ${HOME}/dotfiles/.config/aerospace/plugins/move-floating.sh 0 32'
@@ -217,22 +225,22 @@ shift-l = 'exec-and-forget ${HOME}/dotfiles/.config/aerospace/plugins/resize-flo
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
-    esc = ['reload-config', 'mode main']
-    r = ['flatten-workspace-tree', 'mode main'] # reset layout
-    f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
-    backspace = ['close-all-windows-but-current', 'mode main']
+    esc = ['reload-config', 'mode main','exec-and-forget sketchybar --trigger aerospace_mode_change']
+    r = ['flatten-workspace-tree', 'mode main','exec-and-forget sketchybar --trigger aerospace_mode_change'] # reset layout
+    f = ['layout floating tiling', 'mode main','exec-and-forget sketchybar --trigger aerospace_mode_change'] # Toggle between floating and tiling layout
+    backspace = ['close-all-windows-but-current', 'mode main','exec-and-forget sketchybar --trigger aerospace_mode_change']
 
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
     #s = ['layout sticky tiling', 'mode main']
 
-    alt-shift-h = ['join-with left', 'mode main']
-    alt-shift-j = ['join-with down', 'mode main']
-    alt-shift-k = ['join-with up', 'mode main']
-    alt-shift-l = ['join-with right', 'mode main']
+    alt-shift-h = ['join-with left', 'mode main','exec-and-forget sketchybar --trigger aerospace_mode_change']
+    alt-shift-j = ['join-with down', 'mode main','exec-and-forget sketchybar --trigger aerospace_mode_change']
+    alt-shift-k = ['join-with up', 'mode main','exec-and-forget sketchybar --trigger aerospace_mode_change']
+    alt-shift-l = ['join-with right', 'mode main','exec-and-forget sketchybar --trigger aerospace_mode_change']
 
     down = 'volume down'
     up = 'volume up'
-    shift-down = ['volume set 0', 'mode main']
+    shift-down = ['volume set 0', 'mode main','exec-and-forget sketchybar --trigger aerospace_mode_change']
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
@@ -245,3 +253,4 @@ run = "move-node-to-workspace D"
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = "move-node-to-workspace B"
+
