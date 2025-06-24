@@ -1,4 +1,4 @@
-# Dev Starter Pack (Dotfiles)
+# Rice Box
 This repository contains my personal configuration files (`dotfiles`) designed specifically for **macOS** development environments. It sets up my preferred tools and settings across machines using [GNU Stow](https://www.gnu.org/software/stow/), which makes it easy to manage and symlink configuration files into the correct locations on macOS systems.
 
 
