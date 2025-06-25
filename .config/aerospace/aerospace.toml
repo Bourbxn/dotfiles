@@ -9,7 +9,8 @@ after-login-command = ['exec-and-forget sketchybar']
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+# Janky Borders with Catpuccin Theme
+after-startup-command = ['exec-and-forget borders active_color=0xffcdd6f4 inactive_color=0xff45475a width=5.0']
 
 # Start AeroSpace at login
 start-at-login = true 
