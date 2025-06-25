@@ -6,7 +6,6 @@ This repository contains my personal configuration files (`dotfiles`) designed s
 
 
 
-
 ## Requirements
 Ensure you have the following installed on your system <br><br>
 **NOTE:** If you prefer not to install them manually, see [Auto Installation](#auto-installation).
@@ -73,6 +72,9 @@ To completely remove all installed tools and configuration files:
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/Bourbxn/dotfiles/master/uninstall.sh)
 ```
+> [!IMPORTANT]
+> The auto installation and uninstallation scripts are built for **macOS only**. They are not compatible with Linux or Windows.
+
 
 ### Manual Installation
 Clone the repo into your home directory:
