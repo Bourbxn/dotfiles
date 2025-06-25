@@ -8,8 +8,9 @@ This repository contains my personal configuration files (`dotfiles`) designed s
 
 
 ## Requirements
-Ensure you have the following installed on your system <br><br>
-**NOTE:** If you prefer not to install them manually, see [Auto Installation](#auto-installation).
+Ensure you have the following installed on your system 
+> [!NOTE]
+> If you prefer not to install everything manually, you can use the [Auto Installation](#auto-installation) script provided.
 ### Stow
 ```bash
 brew install stow
