@@ -2,7 +2,8 @@
 This repository contains my personal configuration files (`dotfiles`) designed specifically for **macOS** development environments. It sets up my preferred tools and settings across machines using [GNU Stow](https://www.gnu.org/software/stow/), which makes it easy to manage and symlink configuration files into the correct locations on macOS systems.
 
 
-![image](https://github.com/user-attachments/assets/48fc0cb2-3e98-44a2-a3f7-a9d3dd885e52)
+![image](https://github.com/user-attachments/assets/e7ea3e5a-391e-4105-914a-0f9202c43500)
+
 
 
 
@@ -21,14 +22,19 @@ brew install --cask wezterm
 ```bash
 brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting btop fzf fnm pyenv thefuck zoxide tlrc
 ```
-### Nerd Fonts (for icons/symbols)
-Install a Nerd Font to correctly render icons used by tools like Starship, WezTerm, and lsd. [Download Nerd Fonts](https://www.nerdfonts.com/font-downloads)
-Recommended: Hack Nerd Font, FiraCode Nerd Font or JetBrainsMono Nerd Font.
+### UI & Window Customization
+```bash
+brew tap FelixKratz/formulae
+brew install sketchybar borders nikitabobko/tap/aerospace
+```
 ### Desktop Applications (optional)
 These are desktop applications I personally use alongside my terminal setup. They’re optional and not required for the dotfiles to work.
 ```bash
-brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus nikitabobko/tap/aerospace
+brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
 ```
+### Nerd Fonts (for icons/symbols)
+Install a Nerd Font to correctly render icons used by tools like Starship, WezTerm, and lsd. [Download Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+Recommended: Hack Nerd Font, FiraCode Nerd Font or JetBrainsMono Nerd Font.
 
 
 ## Tool List
@@ -53,6 +59,7 @@ brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
 | [IdeaVim](https://github.com/JetBrains/ideavim) | Vim emulation plugin for IntelliJ IDEA and JetBrains IDEs. Enables Vim keybindings and modal editing. |
 | [AeroSpace](https://github.com/aerospace/aerospace) | A lightweight tiling window manager with support for custom layouts, dynamic gaps, and window management. |
 | [sketchybar](https://github.com/FelixKratz/sketchybar) | Customizable macOS status bar with scriptable items and animations. |
+| [JankyBorders](https://github.com/koekeishiya/jankyborders) | Window borders for macOS, often used with Aerospace. |
 
 ## Theme
 All tools are themed using the [Catppuccin](https://github.com/catppuccin) color palette (Mocha variant), providing a consistent pastel tone across:
