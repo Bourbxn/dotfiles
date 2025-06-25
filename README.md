@@ -1,4 +1,4 @@
-# Rice Box
+# Bourbxn's dotfiles
 This repository contains my personal configuration files (`dotfiles`) designed specifically for **macOS** development environments. It sets up my preferred tools and settings across machines using [GNU Stow](https://www.gnu.org/software/stow/), which makes it easy to manage and symlink configuration files into the correct locations on macOS systems.
 
 
@@ -24,6 +24,11 @@ brew install --cask wezterm
 brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting btop fzf fnm pyenv thefuck zoxide tlrc
 ```
 ### UI & Window Customization
+> [!NOTE]
+> If you want to use SketchyBar, please install Xcode first by running the following command
+```bash
+xcode-select --install
+```
 ```bash
 brew tap FelixKratz/formulae
 brew install sketchybar borders nikitabobko/tap/aerospace
