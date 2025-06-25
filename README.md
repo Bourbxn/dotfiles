@@ -112,6 +112,15 @@ Launch tmux (first time only) and press `<C-b> + I` to install plugins:
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux
 ```
+
+> [!IMPORTANT]
+> The default setup of **Aerospace** and **SketchyBar** may not be suitable for all screen resolutions or aspect ratios.
+> You are encouraged to customize the configuration to better fit your display setup:
+> - `~/dotfiles/.config/aerospace/aerospace.toml`
+> - `~/dotfiles/.config/sketchybar/sketchybarrc`
+> After making any changes, be sure to reload both Aerospace and SketchyBar for the updates to take effect.
+
+
 ### Optional Setup
 #### FZF Key bindings
 To enable useful keybindings for FZF (like reverse search in terminal), run:
