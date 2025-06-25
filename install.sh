@@ -117,6 +117,15 @@ else
     brew upgrade font-sf-pro
 fi
 
+# Install janky borders if not installed, else upgrade
+if ! brew list | grep -q "^borders\$"; then
+    echo "📦 Installing borders..."
+    brew install borders
+else
+    echo "🔄 Upgrading borders..."
+    brew upgrade borders
+fi
+
 # Install nerd font
 echo ""
 echo "🎨 Installing Hack Nerd Font..."
