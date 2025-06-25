@@ -2,7 +2,8 @@
 This repository contains my personal configuration files (`dotfiles`) designed specifically for **macOS** development environments. It sets up my preferred tools and settings across machines using [GNU Stow](https://www.gnu.org/software/stow/), which makes it easy to manage and symlink configuration files into the correct locations on macOS systems.
 
 
-![image](https://github.com/user-attachments/assets/61ef56f3-de7b-4923-be41-715853dbd4f3)
+![image](https://github.com/user-attachments/assets/48fc0cb2-3e98-44a2-a3f7-a9d3dd885e52)
+
 
 
 
