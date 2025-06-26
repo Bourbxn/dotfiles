@@ -61,7 +61,7 @@ apps=(
     btop
     fzf
     fnm
-    pyenv
+    uv
     thefuck
     zoxide
     tlrc
