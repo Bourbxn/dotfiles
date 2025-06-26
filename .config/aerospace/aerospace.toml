@@ -70,7 +70,8 @@ exec-on-workspace-change = ['/bin/bash', '-c',
     inner.vertical =   10
     outer.left =       10
     outer.bottom =     10
-    outer.top =        36
+    # outer.top =        36 # Extend Monitor
+    outer.top =        18 # Extend Monitor
     outer.right =      10
 
 # 'main' binding mode declaration

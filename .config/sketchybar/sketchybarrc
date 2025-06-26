@@ -18,7 +18,8 @@ ITEM_DIR="$CONFIG_DIR/items"
 # If you are looking for other colors, see the color picker:
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
-sketchybar --bar position=top height=24 blur_radius=30 color=$BAR_COLOR
+# sketchybar --bar position=top height=24 blur_radius=30 color=$BAR_COLOR # Extend Monitor
+sketchybar --bar position=top height=43 blur_radius=30 color=$BAR_COLOR # MacOS Monitor (Display more space)
 
 ##### Changing Defaults #####
 # We now change some default values, which are applied to all further items.
@@ -33,7 +34,8 @@ default=(
     label.font="SF Pro:Semibold:12.0"
     background.color=$ITEM_BG_COLOR
     background.corner_radius=3
-    background.height=14
+    # background.height=14 # Extend Monitor
+    background.height=24 # MacOS Monitor (Display more space)
     icon.color=$WHITE
     label.color=$WHITE
     icon.padding_left=4
