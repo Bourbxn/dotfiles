@@ -24,7 +24,7 @@ apps=(
     zoxide
     tlrc
     sketchybar
-    # aerospace installed from tap
+    borders
 )
 
 echo "🧹 Uninstalling brew formula apps..."

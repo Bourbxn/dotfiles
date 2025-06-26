@@ -1,14 +1,16 @@
-# Rice Box
+# Bourbxn's dotfiles
 This repository contains my personal configuration files (`dotfiles`) designed specifically for **macOS** development environments. It sets up my preferred tools and settings across machines using [GNU Stow](https://www.gnu.org/software/stow/), which makes it easy to manage and symlink configuration files into the correct locations on macOS systems.
 
 
-![image](https://github.com/user-attachments/assets/48fc0cb2-3e98-44a2-a3f7-a9d3dd885e52)
+![image](https://github.com/user-attachments/assets/e7ea3e5a-391e-4105-914a-0f9202c43500)
+
 
 
 
 ## Requirements
-Ensure you have the following installed on your system <br><br>
-**NOTE:** If you prefer not to install them manually, see [Auto Installation](#auto-installation).
+Ensure you have the following installed on your system 
+> [!NOTE]
+> If you prefer not to install everything manually, you can use the [Auto Installation](#auto-installation) script provided.
 ### Stow
 ```bash
 brew install stow
@@ -21,14 +23,24 @@ brew install --cask wezterm
 ```bash
 brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting btop fzf fnm pyenv thefuck zoxide tlrc
 ```
-### Nerd Fonts (for icons/symbols)
-Install a Nerd Font to correctly render icons used by tools like Starship, WezTerm, and lsd. [Download Nerd Fonts](https://www.nerdfonts.com/font-downloads)
-Recommended: Hack Nerd Font, FiraCode Nerd Font or JetBrainsMono Nerd Font.
+### UI & Window Customization
+> [!NOTE]
+> If you want to use SketchyBar, please install Xcode first by running the following command
+```bash
+xcode-select --install
+```
+```bash
+brew tap FelixKratz/formulae
+brew install sketchybar borders nikitabobko/tap/aerospace
+```
 ### Desktop Applications (optional)
 These are desktop applications I personally use alongside my terminal setup. They’re optional and not required for the dotfiles to work.
 ```bash
-brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus nikitabobko/tap/aerospace
+brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
 ```
+### Nerd Fonts (for icons/symbols)
+Install a Nerd Font to correctly render icons used by tools like Starship, WezTerm, and lsd. [Download Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+Recommended: Hack Nerd Font, FiraCode Nerd Font or JetBrainsMono Nerd Font.
 
 
 ## Tool List
@@ -53,6 +65,7 @@ brew install --cask amazon-q gitkraken notion orbstack postman raycast tableplus
 | [IdeaVim](https://github.com/JetBrains/ideavim) | Vim emulation plugin for IntelliJ IDEA and JetBrains IDEs. Enables Vim keybindings and modal editing. |
 | [AeroSpace](https://github.com/aerospace/aerospace) | A lightweight tiling window manager with support for custom layouts, dynamic gaps, and window management. |
 | [sketchybar](https://github.com/FelixKratz/sketchybar) | Customizable macOS status bar with scriptable items and animations. |
+| [JankyBorders](https://github.com/koekeishiya/jankyborders) | Window borders for macOS, often used with Aerospace. |
 
 ## Theme
 All tools are themed using the [Catppuccin](https://github.com/catppuccin) color palette (Mocha variant), providing a consistent pastel tone across:
@@ -105,6 +118,15 @@ Launch tmux (first time only) and press `<C-b> + I` to install plugins:
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux
 ```
+
+> [!IMPORTANT]
+> The default setup of **Aerospace** and **SketchyBar** may not be suitable for all screen resolutions or aspect ratios.
+> You are encouraged to customize the configuration to better fit your display setup:
+> - `~/dotfiles/.config/aerospace/aerospace.toml`
+> - `~/dotfiles/.config/sketchybar/sketchybarrc`
+> After making any changes, be sure to reload both Aerospace and SketchyBar for the updates to take effect.
+
+
 ### Optional Setup
 #### FZF Key bindings
 To enable useful keybindings for FZF (like reverse search in terminal), run:
