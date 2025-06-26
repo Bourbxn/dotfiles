@@ -21,7 +21,7 @@ brew install --cask wezterm
 ```
 ### CLI Tools
 ```bash
-brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting btop fzf fnm pyenv thefuck zoxide tlrc
+brew install tmux zsh starship spotify_player lazygit neovim lsd lf bat ripgrep zsh-syntax-highlighting btop fzf fnm uv thefuck zoxide tlrc
 ```
 ### UI & Window Customization
 > [!NOTE]
