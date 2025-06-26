@@ -6,7 +6,7 @@ ZSH_THEME="robbyrussell"
 # aliases
 alias cd="z"
 # alias cdi="zi"
-alias py="python3"
+alias py="python"
 alias stshconf="nvim ~/.config/starship.toml"
 alias zshconf="nvim ~/.zshrc"
 alias zshrest="source ~/.zshrc"
@@ -126,9 +126,6 @@ export FZF_DEFAULT_OPTS=" \
 
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
 
 # lf
 export EDITOR=nvim
@@ -147,4 +144,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 
+# UV for python
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(uv generate-shell-completion zsh)"
+
