@@ -135,7 +135,7 @@ $(brew --prefix)/opt/fzf/install
 ```
 
 ## Troubleshooting
-- If you encounter issues in Neovim related to Mason or run into errors, check the [BourbxnNvimV2](https://github.com/Bourbxn/bourbxn-nvim-v2) repository under the Important Notes section.
+- If you encounter issues in Neovim related to Mason or run into errors, check the [BourbxnNvimV2](https://github.com/Bourbxn/bourbxn-nvim-v2?tab=readme-ov-file#plugins-list) repository under the Important Notes section.
 
 ## Notes
 - You can safely edit config files directly inside the dotfiles/ repo
