@@ -134,6 +134,9 @@ To enable useful keybindings for FZF (like reverse search in terminal), run:
 $(brew --prefix)/opt/fzf/install
 ```
 
+## Troubleshooting
+- If you encounter issues in Neovim related to Mason or run into errors, check the [BourbxnNvimV2](https://github.com/Bourbxn/bourbxn-nvim-v2) repository under the Important Notes section.
+
 ## Notes
 - You can safely edit config files directly inside the dotfiles/ repo
 - Some tools (like spotify-player) may require additional API tokens or setup
